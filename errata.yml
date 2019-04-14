@@ -21,7 +21,7 @@ lectures:
         erratum: "Closure lemma needs typing assumption |- e : X"
         comment: >
           To prove e \in Halt_X, we need |- e : X (see erratum for slide 9). When
-          proving the closure lemma, we will assuem e' \in Halt_X and try and prove
+          proving the closure lemma, we will assume e' \in Halt_X and try and prove
           e \in Halt_X, so we need to show |- e : X. But "reverse preservation" is not
           a theorem, so this fails. However, if we assume |- e : X up front, then the
           proof is straightforward.
