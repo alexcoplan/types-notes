@@ -4,7 +4,6 @@
 
 import requests
 import yaml
-from sys import stdout
 
 base_url = "https://www.cl.cam.ac.uk/teaching/1819/Types"
 
@@ -47,9 +46,11 @@ for lec in errata["lectures"]:
   errata_for_lec = lec["errata"]
   lm = lm_of_url(url_of_lec(lec_num-1))
   if lm is None:
-    print("Failed to check for updated on lecture %s" % lec_num)
+    print("Failed to check for updates on lecture %s" % lec_num)
     continue
   if lm != lm_known:
     print("Lecture %s updated! Need to check if errata still valid." % lec_num)
     continue
   print("Lecture %s not updated, errata still valid." % lec_num)
+
+print("All done.")
