@@ -3,7 +3,7 @@ combined:
 
 lectures:
   - lecture: 2
-    title: "The Curry-Howard Correspndence"
+    title: "The Curry-Howard Correspondence"
     last-modified: "Tue, 09 Oct 2018 09:20:57 GMT"
     errata:
       - slide: 16
