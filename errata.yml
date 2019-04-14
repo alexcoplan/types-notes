@@ -1,0 +1,65 @@
+combined:
+  last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
+
+lectures:
+  - lecture: 2
+    title: "The Curry-Howard Correspndence"
+    last-modified: "Tue, 09 Oct 2018 09:20:57 GMT"
+    errata:
+      - slide: 16
+        erratum: "Need congruence rules for reducing under fst/snd"
+        comment: "Otherwise we don't have progress for STLC"
+
+  - lecture: 3
+    title: "Consistency and Termination"
+    last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
+    errata:
+      - slide: 9
+        erratum: "Should it be made explicit that terms in Halt_X are of type X?"
+        comment: "This is needed to apply the IH (step 9, slide 19) in proof of fund. lemma"
+      - slide: 10
+        erratum: "Closure lemma needs typing assumption |- e : X"
+        comment: >
+          To prove e \in Halt_X, we need |- e : X (see erratum for slide 9). When
+          proving the closure lemma, we will assuem e' \in Halt_X and try and prove
+          e \in Halt_X, so we need to show |- e : X. But "reverse preservation" is not
+          a theorem, so this fails. However, if we assume |- e : X up front, then the
+          proof is straightforward.
+      - slide: 13
+        erratum: "Step (10) should say e' in Halt_{Y -> Z}, not e."
+      - slide: 18
+        erratum: "Step (1): premise of rule should finish e: Z, not e : Y"
+      - slide: 19
+        erratum: "Step (1) should be many-step?"
+
+  - lecture: 5
+    title: "System F and Church Encodings"
+    last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
+    errata:
+      - slide: 2
+        erratum: "Rule for forall types is incorrect, it has the conclusion for arrow types"
+        comment: "Conclusion should be theta |- forall alpha . A : type"
+      - slide: 3
+        erratum: "The conclusion of the rule on the RHS should end 'ctx', not 'type'"
+      - slide: 3
+        erratum: "First bullet point should read theta |- Gamma ctx, not type"
+      - slide: 8
+        erratum: "3. second and third judgements should read ctx, not type"
+  
+  - lecture: 6
+    title: "Existentials, Data Abstraction, and Termination for System F"
+    last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
+    errata:
+      - slide: 17
+        erratum: "(trivial typo) second bullet point, 'we define will define'"
+      - slide: 19
+        erratum: "In 'Substitution', should there be a '/alpha' before the last right paren?"
+        comment: "Otherwise, what is the meaning of the notation?"
+
+  - lecture: 8
+    title: "Using Monads to Control Effects"
+    last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
+    errata:
+      - slide: 4
+        erratum: "Under 'Mark the use of state', third bullet should finish 'impure ones'"
+
