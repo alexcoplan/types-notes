@@ -32,6 +32,16 @@ lectures:
       - slide: 19
         erratum: "Step (1) should be many-step?"
 
+  - lecture: 4
+    title: "Datatypes and Polymorphism"
+    last-modified: "Tue, 16 Oct 2018 14:11:35 GMT"
+    errata:
+      - slide: 7
+        erratum: >
+          The expression being substituted for f should be fun_{1 -> 0} f x . f x,
+          not fun_{1 -> 0} f x . f <>.
+
+
   - lecture: 5
     title: "System F and Church Encodings"
     last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"

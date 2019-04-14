@@ -51,6 +51,6 @@ for lec in errata["lectures"]:
   if lm != lm_known:
     print("Lecture %s updated! Need to check if errata still valid." % lec_num)
     continue
-  print("Lecture %s not updated, errata still valid." % lec_num)
+  print("Lecture %s not updated (since %s), errata still valid." % (lec_num, lm_known))
 
 print("All done.")
