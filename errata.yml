@@ -48,7 +48,7 @@ lectures:
         erratum: >
           Step (1): premise of rule should finish $e: Z$, not $e : Y$.
       - slide: 19
-        erratum: "Step (1) should be many-step, not single-step."
+        erratum: "Step (10) should be many-step, not single-step."
 
   - lecture: 4
     title: "Datatypes and Polymorphism"
