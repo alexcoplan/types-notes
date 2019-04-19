@@ -7,30 +7,48 @@ lectures:
     last-modified: "Tue, 09 Oct 2018 09:20:57 GMT"
     errata:
       - slide: 16
-        erratum: "Need congruence rules for reducing under fst/snd"
-        comment: "Otherwise we don't have progress for STLC"
+        erratum: >
+          We need congruence rules for reducing under fst/snd. Otherwise we
+          don't have progress for STLC. The following rules need to be added:
+          \begin{center}
+          \AXC{$ e \leadsto e' $}
+          \UIC{$ \mathrm{fst}\ e \leadsto \mathrm{fst}\ e' $}
+          \DP
+          \hspace{4mm}
+          \AXC{$ e \leadsto e' $}
+          \UIC{$ \mathrm{snd}\ e \leadsto \mathrm{snd}\ e' $}
+          \DP
+          \end{center}
 
   - lecture: 3
     title: "Consistency and Termination"
     last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
     errata:
       - slide: 9
-        erratum: "Should it be made explicit that terms in Halt_X are of type X?"
-        comment: "This is needed to apply the IH (step 9, slide 19) in proof of fund. lemma"
+        erratum: >
+          It should be made explicit that terms in $\mathrm{Halt}_X$ are closed
+          terms of type $X$ (cf.\ Pierce T\&PL 12.1), i.e.\
+          $$\forall e \in \mathrm{Halt}_X .\ \cdot \vdash e : X. $$
+          This is needed to apply the IH (step 9, slide 19) in the proof
+          of the fundamental lemma.
       - slide: 10
-        erratum: "Closure lemma needs typing assumption |- e : X"
-        comment: >
-          To prove e \in Halt_X, we need |- e : X (see erratum for slide 9). When
-          proving the closure lemma, we will assume e' \in Halt_X and try and prove
-          e \in Halt_X, so we need to show |- e : X. But "reverse preservation" is not
-          a theorem, so this fails. However, if we assume |- e : X up front, then the
-          proof is straightforward.
+        erratum: >
+          Closure lemma needs additional typing assumption $\cdot \vdash e : X$.
+          Notably, this assumption is in Pierce's closure lemma (12.1.4).
+
+          When proving the closure lemma, we will assume $e' \in
+          \mathrm{Halt}_X$ and try and prove $e \in \mathrm{Halt}_X$, so we need
+          to show $\cdot \vdash e : X$ (cf.\ erratum for slide 9). But ``reverse
+          preservation'' is not a theorem, so this fails.  However, if we assume
+          $\cdot \vdash e : X$ up front, then the proof is straightforward.
       - slide: 13
-        erratum: "Step (10) should say e' in Halt_{Y -> Z}, not e."
+        erratum: >
+          Step (10) should say $e' \in \mathrm{Halt}_{Y \rightarrow Z}$, not $e \in \mathrm{Halt}_{Y \rightarrow Z}$.
       - slide: 18
-        erratum: "Step (1): premise of rule should finish e: Z, not e : Y"
+        erratum: >
+          Step (1): premise of rule should finish $e: Z$, not $e : Y$.
       - slide: 19
-        erratum: "Step (1) should be many-step?"
+        erratum: "Step (1) should be many-step, not single-step."
 
   - lecture: 4
     title: "Datatypes and Polymorphism"
@@ -38,37 +56,46 @@ lectures:
     errata:
       - slide: 7
         erratum: >
-          The expression being substituted for f should be fun_{1 -> 0} f x . f x,
-          not fun_{1 -> 0} f x . f <>.
+          The expression being substituted for $f$ in the reductions should be
+          $\mathrm{fun}_{1 \rightarrow 0} f x . f x$, not $\mathrm{fun}_{1
+          \rightarrow 0} f x . f \langle\rangle$.
 
   - lecture: 5
     title: "System F and Church Encodings"
     last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
     errata:
       - slide: 2
-        erratum: "Rule for forall types is incorrect, it has the conclusion for arrow types"
-        comment: "Conclusion should be theta |- forall alpha . A : type"
+        erratum: >
+          The rule for forall types is incorrect, it has the conclusion for
+          function types.  The conclusion should read $\Theta \vdash \forall
+          \alpha . A : \mathrm{type}$. That is, the rule should be:
+          \begin{prooftree}
+          \AXC{$ \Theta,\alpha \vdash A\ \mathrm{type} $}
+          \UIC{$ \Theta \vdash \forall \alpha.A\ \mathrm{type} $}
+          \end{prooftree}
       - slide: 3
-        erratum: "The conclusion of the rule on the RHS should end 'ctx', not 'type'"
+        erratum: "The conclusion of the rule on the RHS should end `ctx', not `type'."
       - slide: 3
-        erratum: "First bullet point should read theta |- Gamma ctx, not type"
+        erratum: >
+          The first bullet point should read $\Theta \vdash \Gamma\ \mathrm{ctx}$, not
+          $\Theta \vdash \Gamma\ \mathrm{type}$.
       - slide: 8
-        erratum: "3. second and third judgements should read ctx, not type"
+        erratum: "In point 3.\\ the second and third judgements should read ctx, not type."
   
   - lecture: 6
     title: "Existentials, Data Abstraction, and Termination for System F"
     last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
     errata:
       - slide: 17
-        erratum: "(trivial typo) second bullet point, 'we define will define'"
+        erratum: "(trivial typo): the second bullet point reads ``we define will define''."
       - slide: 19
-        erratum: "In 'Substitution', should there be a '/alpha' before the last right paren?"
-        comment: "Otherwise, what is the meaning of the notation?"
+        erratum: >
+          In `Substitution', there should be a $/\alpha$ before the last right paren.
 
   - lecture: 8
     title: "Using Monads to Control Effects"
     last-modified: "Tue, 13 Nov 2018 11:34:06 GMT"
     errata:
       - slide: 4
-        erratum: "Under 'Mark the use of state', third bullet should finish 'impure ones'"
+        erratum: "Under `Mark the use of state', the third bullet should finish `impure ones'."
 

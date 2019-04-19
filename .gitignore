@@ -3,3 +3,15 @@ venv
 
 # vim swapfiles
 *.swp
+
+# latex cruft
+*.tex
+*.aux
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Don't track the pdf or latex output (they are both build artifacts).
+errata.pdf
+errata.tex
