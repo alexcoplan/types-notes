@@ -8,4 +8,4 @@ $ pip3 install -r requirements.txt
 $ ./check_for_updates.py
 ```
 
-PDF available [here](https://github.com/alexcoplan/types-notes/releases/download/v1.0/errata.pdf).
+PDF available [here](https://github.com/alexcoplan/types-notes/releases/download/v1.0.1/errata.pdf).
