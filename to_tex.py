@@ -13,7 +13,6 @@ tex_start = """
 \\usepackage{bussproofs} % proof trees
 \\usepackage{amssymb}
 \\EnableBpAbbreviations
-% \\usepackage{stmaryrd}
 
 \\begin{document}
 \\title{Types Errata (2018-2019)}
